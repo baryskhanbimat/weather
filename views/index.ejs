@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form action="/" method="post">
+      <input type="text" name="city" value="">
+      <button type="submit" name="button">Send request</button>
+    </form>
+    <% if(weather !== null) { %>
+      <h2><%- weather %></h2>
+    <% } %>
+    <% if(error !== null) { %>
+      <h2><%= error %></h2>
+    <% } %>
+  </body>
+</html>
